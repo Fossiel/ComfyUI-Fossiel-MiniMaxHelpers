@@ -29,6 +29,14 @@ Classic-style conditioning node for **MiniMax-H3-Image**.
 1. **width** / **height** – Generation resolution (0 = auto from first image or 2048)  
 2. **Auto_MiniMax_Translation** – Convert shorthand tags before encoding (default: True)
 
+The `Auto-MiniMax-Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will atomatically translate it to the `< >` format that MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
+
+**Translation rules (when enabled):**
+- `Sub1` / `Subject 1` / `Char2` / `Character 2` / `Actor3` / `Actress 3` → `<Subject N>`
+- `Pic1` / `Picture 1` / `Image2` / `Img3` → `<Picture N>`
+- `Vid1` / `Video 1` → `<Video N>`
+- `Aud1` / `Audio 1` → `<Audio N>`  
+
 **Optional Inputs:**
 1. **vae** – MiniMax-H3-Image VAE (enables reference latents)  
 2. **image1** … **image5** – Reference images
@@ -36,13 +44,7 @@ Classic-style conditioning node for **MiniMax-H3-Image**.
 **Outputs:**
 1. **positive** – Conditioning  
 2. **latent** – Empty latent ready for sampling  
-3. **Final_Prompt** – The prompt after translation (if enabled)
-
-**Translation rules (when enabled):**
-- `Sub1` / `Subject 1` / `Char2` / `Character 2` / `Actor3` / `Actress 3` → `<Subject N>`
-- `Pic1` / `Picture 1` / `Image2` / `Img3` → `<Picture N>`
-- `Vid1` / `Video 1` → `<Video N>`
-- `Aud1` / `Audio 1` → `<Audio N>`
+3. **Final_Prompt** – The prompt after translation (if enabled)  
 
 ---
 
@@ -104,7 +106,9 @@ Classic ComfyUI version of the MiniMax H3 Reference-to-Video node with **permane
 Identical functionality to the Perma-Ports version, with the following additions:
 
 - **Auto_MiniMax_Translation** (default: True)
-- **Final_Prompt** output (the prompt after translation)
+- **Final_Prompt** output (the prompt after translation)  
+
+The `Auto_MiniMax_Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will atomatically translate it to the `< >` format that MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
 
 **Conservative translation rules (when enabled):**
 - `Character` / `Char` / `Actor` / `Actress` → `<Subject N>`
@@ -131,11 +135,13 @@ Classic-style conditioning node for **P-H3 Image**.
 
 **Required Inputs:**
 1. **clip** – P-H3-compatible CLIP / text encoder  
-2. **prompt** – Text prompt (supports dynamic prompts)
+2. **prompt** – Text prompt (supports dynamic prompts)  
 
 **Parameters:**
 1. **width** / **height** – Generation resolution (0 = auto from first image or 2912)  
 2. **Auto_MiniMax_Translation** – Convert shorthand tags before encoding (default: True)
+
+The `Auto_MiniMax_Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will atomatically translate it to the `< >` format that MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
 
 **Optional Inputs:**
 1. **vae** – P-H3 Image VAE (enables reference latents)  
