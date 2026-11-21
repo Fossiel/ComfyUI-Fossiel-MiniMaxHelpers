@@ -29,7 +29,7 @@ Classic-style conditioning node for **MiniMax-H3-Image**.
 1. **width** / **height** – Generation resolution (0 = auto from first image or 2048)  
 2. **Auto_MiniMax_Translation** – Convert shorthand tags before encoding (default: True)
 
-The `Auto-MiniMax-Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will atomatically translate it to the `< >` format that MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
+The `Auto-MiniMax-Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will automatically translate it to the `< >` format which MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
 
 **Translation rules (when enabled):**
 - `Sub1` / `Subject 1` / `Char2` / `Character 2` / `Actor3` / `Actress 3` → `<Subject N>`
@@ -108,7 +108,7 @@ Identical functionality to the Perma-Ports version, with the following additions
 - **Auto_MiniMax_Translation** (default: True)
 - **Final_Prompt** output (the prompt after translation)  
 
-The `Auto_MiniMax_Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will atomatically translate it to the `< >` format that MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
+The `Auto_MiniMax_Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will automatically translate it to the `< >` format which MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
 
 **Conservative translation rules (when enabled):**
 - `Character` / `Char` / `Actor` / `Actress` → `<Subject N>`
@@ -141,7 +141,7 @@ Classic-style conditioning node for **P-H3 Image**.
 1. **width** / **height** – Generation resolution (0 = auto from first image or 2912)  
 2. **Auto_MiniMax_Translation** – Convert shorthand tags before encoding (default: True)
 
-The `Auto_MiniMax_Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will atomatically translate it to the `< >` format that MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
+The `Auto_MiniMax_Translation` feature makes writing prompts significantly easier for people who are used to models like Qwen, Krea2 etc. Instead of working with MiniMax's `<Subject N>` format, you can write Character1 or Actress1; instead if <Picture 1> you can write image1 or img1 etc. The node will automatically translate it to the `< >` format which MiniMax understands. In addition, you can hook up a result node such as the *Show Any* node to the `Final_Prompt` output the check that all translations have been done correctly before letting your workflow complete the generation.  
 
 **Optional Inputs:**
 1. **vae** – P-H3 Image VAE (enables reference latents)  
