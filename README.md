@@ -97,6 +97,8 @@ All optional ports are always visible, making it easy to wire complex multi-refe
 
 ### MiniMax H3 Reference to Video - Natural
 
+![rtvpn](images/rtvpn_ss.png)
+
 Classic ComfyUI version of the MiniMax H3 Reference-to-Video node with **permanent optional inputs** + **Auto-MiniMax Translation** + **Final_Prompt** output.
 
 Identical functionality to the Perma-Ports version, with the following additions:
